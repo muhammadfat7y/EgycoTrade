@@ -1,0 +1,42 @@
+
+body{
+    filter:url(#round2);
+    background-color: white
+}
+.n1{
+    
+    /*clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);*/
+    clip-path: polygon(50% 0, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+    background-color: #666;
+    
+    height: calc(100vh - 100px);
+}
+
+.n2::before {
+    content: "";
+    display: block;
+    height: 280px;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    clip-path: polygon(0 0, 100% 25%, 100% 75%, 0 100%);
+    background-color: skyblue;
+}
+
+.n2::after {
+    content: "";
+    display: block;
+    height: 280px;
+    width: 150px;
+    position: absolute;
+    right: 0;
+    float: right;
+    clip-path: polygon(100% 0, 100% 100%, 0 75%, 0 25%);
+    background-color: skyblue;
+}
+
+.n2{
+    
+    color: black;
+    text-align: center;
+}
