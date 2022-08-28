@@ -23,7 +23,7 @@
     background: #191a1a;
     text-align: center;
 	z-index: 9999999;
-    position: absolute;
+    position: fixed;
 
   }
   
@@ -346,9 +346,10 @@ body{
     background-image: url(../img/AdobeStock_81873311-2560x1440-400x250.jpg) ;
     background-size: cover;
     height: 330px;
-    width: 350px;
+    width: 315px;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin: 0 auto;
 }
 
 .about p {
@@ -410,12 +411,12 @@ body{
 }
 
 .services .services-img {
-    background-image: url(../img/service.png) ;
-    background-size: cover;
     height: 350px;
-    width: 350px;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    background: url(../img/service.png) center no-repeat;
+    background-size: contain;
 }
 
 .services  ul {
@@ -436,6 +437,7 @@ body{
 .services ul li::marker {
     color:#57A432;
 }
+
 
 
 /*==================== End Services =======================*/
@@ -540,14 +542,15 @@ body{
 
 
 .portofilio  h2{
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 60px;
-    line-height: 1.2;
+    line-height: 1.7;
     font-weight: 900;
     font-family: swiss;
     text-transform: uppercase;
     color: #fefefe;
     position: relative;
+    text-align: center;
 }
 
 .portofilio  h3{
@@ -609,9 +612,9 @@ body{
    
    
    .marks  h2{
-       font-size: 40px;
+       font-size: 35px;
        margin-bottom: 60px;
-       line-height: 1.2;
+       line-height: 1.5;
        font-weight: 900;
        font-family: swiss;
        text-transform: uppercase;
@@ -846,7 +849,7 @@ body{
 
   #button {
     display: inline-block;
-    background-color: #7a838d;
+    background-color: #57A432;
     
     width: 50px;
     height: 50px;
@@ -878,12 +881,12 @@ body{
   #button:hover {
     cursor: poswiss;
     background-color: #fefefe;
-    color: #eb5a4f;
+    color: #00648d;
     border:1px solid #7a838d
   }
 
   #button:hover .fa-angle-up {
-    color: #eb5a4f;
+    color: #00648d;
 
   }
  
@@ -937,13 +940,67 @@ body{
 
 
     .main-content {
-        height: calc( 100vh - 90px );
+        height: calc( 100vh - 110px );
+        clip-path: polygon(0 0%, 50% 0, 100% 0%, 100% 90%, 50% 100%, 0 90%);
     }
 
+    .who-content::before {
+        display: none;
+    }
+
+    .who-content::after {
+        display: none;
+    }
+
+    
+    .who-content::after {
+        display: none;
+    }
+
+    .who-content {
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about {
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .about h2 {
+        margin-bottom: 55px;
+    }
+
+
+    .serv-content::before {
+        display: none;
+    }
+
+    .choose-content::before{
+        display: none;
+    }
+
+    .portofilio-content::after{
+        display: none;
+    }
+
+    .marks-content::after{
+        display: none;
+    }
+
+    .footer {
+        clip-path: polygon(50% 0, 100% 5%, 100% 100%, 0 100%, 0 5%);
+    }
+
+    .footer .foot {
+        padding-top: 25px;
+    }
 
     .footer .sec1{
         margin: 0 auto;
         text-align: center;
+        padding-bottom: 30px;
     }
 
     .footer .sec1 .f1 {
@@ -959,11 +1016,17 @@ body{
 
     .footer .sec2{
     padding-left: 10px;
-    padding-top: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    }
+
+    .footer .sec2 h3 {
+        padding-right: 0;
     }
 
     .footer .sec3 {
         padding-left: 10px;
+        margin-right: 5px;
     }
 
 }
